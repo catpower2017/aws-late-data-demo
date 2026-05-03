@@ -5,3 +5,6 @@
 # Terraform working directory
 .terraform/
 .terraform.lock.hcl   # optional, some teams do commit this
+*.tfvars
+*.pem
+*.key
