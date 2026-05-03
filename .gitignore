@@ -1,0 +1,7 @@
+# State files - never commit these
+*.tfstate
+*.tfstate.backup
+
+# Terraform working directory
+.terraform/
+.terraform.lock.hcl   # optional, some teams do commit this
