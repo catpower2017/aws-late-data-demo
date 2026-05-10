@@ -1,6 +1,6 @@
 # AWS Late Arriving Data Pipeline — Demo
-
-A production-ready AWS pipeline that handles late arriving data using:
+if an event arrives late, how do you ensure it's processed exactly once, lands in the right place, and the system recovers automatically if something fails mid-process?
+AWS pipeline that handles late arriving data using:
 **Kinesis → Lambda → S3 → Glue**, with **SQS** for decoupling and failure handling.
 
 ---
@@ -43,7 +43,7 @@ CloudWatch ◄── lateness metrics, DLQ depth alarm
 | SQS for late arrivals | Decouples detection from reprocessing; retries on failure |
 | Glue `partitionOverwriteMode=dynamic` | Only rewrites affected partitions — cheap and idempotent |
 | Both timestamps stored | `event_time` for business logic, `arrival_time` for SLA monitoring |
-
+| Schema enforcement | load job fails if schema mismatch|
 ---
 
 ## Prerequisites
