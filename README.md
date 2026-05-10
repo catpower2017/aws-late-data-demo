@@ -60,7 +60,7 @@ CloudWatch ◄── lateness metrics, DLQ depth alarm
 ### 1. Clone and configure
 
 ```bash
-git clone <this-repo>
+git clone  https://github.com/catpower2017/aws-late-data-demo.git
 cd aws-late-data-demo
 ```
 
